@@ -10,7 +10,7 @@ console.log(base);
 module.exports = function(options) {
   console.log('base', base)
   return validate = ({
-    entry: [base + '/src/app.jsx'].concat(options.entry),
+    entry: [base + '/src/index.jsx'].concat(options.entry),
     output: {
       filename: 'index.js',
       path: base + '/dist',

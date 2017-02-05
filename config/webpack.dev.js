@@ -5,7 +5,7 @@ module.exports = require('./webpack.general.js')({
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './app.jsx'
+    './index.jsx'
   ],
   devtool: 'inline-source-map',
   rules: [
