@@ -1,0 +1,21 @@
+# TODO
+
+- App directory structure
+  - Stores
+  - Components (Styles Inline / es5)
+  - Routes (Maybe?)
+- Config Babel and Eslint
+- Webpack
+  - Babel setup for JSX parsing
+  - Vendor chunk
+  - Dev server
+  - Extract text
+  - Extract HTML
+- Write an App
+  - Put something on the page
+  - Let's use a dropdown and a field
+  - Interact with state in flux store
+  - Cleanup that component lifecycle
+  - KISS
+- Test
+- Deploy
