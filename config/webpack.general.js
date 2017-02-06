@@ -5,8 +5,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var base = resolve(__dirname, '../');
 
-console.log(base);
-
 module.exports = function(options) {
   return validate = ({
     entry: [base + '/src/index.jsx'].concat(options.entry),
@@ -34,8 +32,8 @@ module.exports = function(options) {
         template: base + '/src/index.html'
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(options.env),
-      }),
+        'process.env.NODE_ENV': JSON.stringify(options.env)
+      })
     ].concat(options.plugins)
   });
 };

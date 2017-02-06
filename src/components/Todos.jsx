@@ -31,7 +31,6 @@ var Todos = React.createClass({
 
   addNewTodo: function(e) {
     e.preventDefault();
-    console.log(e)
     this.setState({
       todos: this.state.todos.concat({
         title: this.state.inputValue, complete: false, priority: false
