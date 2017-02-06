@@ -8,20 +8,17 @@ var base = resolve(__dirname, '../');
 console.log(base);
 
 module.exports = function(options) {
-  console.log('base', base)
   return validate = ({
     entry: [base + '/src/index.jsx'].concat(options.entry),
     output: {
       filename: 'index.js',
-      path: base + '/dist',
-      publicPath: '/'
+      path: base + '/dist'
     },
     context: base + '/src',
     devtool: options.devtool,
     devServer: {
       hot: true,
-      contentBase: base + '/dist',
-      publicPath: '/'
+      contentBase: base + '/dist'
     },
     module: {
       rules: [

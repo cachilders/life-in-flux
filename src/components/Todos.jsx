@@ -12,7 +12,7 @@ var Todos = React.createClass({
         {title: 'A thing well done', complete: false, priority: false},
         {title: 'A thing done well', complete: false, priority: false}
       ],
-      isOpen: 'true',
+      isOpen: true,
       inputValue: ''
     };
   },
