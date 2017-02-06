@@ -12,7 +12,7 @@
   - [x] Extract HTML
 - [ ] Write an App
   - [x] Put something on the page
-  - [ ] Let's use a dropdown and a field
+  - [x] Let's use a dropdown and a field
   - [ ] Interact with state in flux store
   - [ ] Cleanup that component lifecycle
   - [ ] KISS
