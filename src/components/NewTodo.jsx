@@ -5,9 +5,15 @@ var FormControl = require('react-bootstrap').FormControl;
 var Button = require('react-bootstrap').Button;
 
 var NewTodo = React.createClass({
-  render: function() {
+
+  propTypes: {
+    addNewTodo: React.PropTypes.func,
+    inputValue: React.PropTypes.string,
+    onChange: React.PropTypes.func,
+  },
+
+  render: function render() {
     var size = {width: 400 + 'px', margin: 5 + 'px'};
-    var addNewTodo = this.props.addNewTodo;
     return (
       <Form inline style={size} onSubmit={this.props.addNewTodo}>
         <FormGroup>
@@ -26,6 +32,7 @@ var NewTodo = React.createClass({
       </Form>
     );
   }
+
 });
 
 module.exports = NewTodo;

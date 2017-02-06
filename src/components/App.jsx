@@ -4,7 +4,8 @@ var Jumbotron = require('react-bootstrap').Jumbotron;
 var Todos = require('./Todos.jsx');
 
 var App = React.createClass({
-  render: function() {
+
+  render: function render() {
     return (
       <div className="container">
         <Jumbotron bsClass="default">
@@ -13,6 +14,7 @@ var App = React.createClass({
       </div>
     );
   }
+
 });
 
 module.exports = App;

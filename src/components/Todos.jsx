@@ -6,7 +6,8 @@ var NewTodo = require('./NewTodo.jsx');
 var Todo = require('./Todo.jsx');
 
 var Todos = React.createClass({
-  getInitialState: function() {
+
+  getInitialState: function getInitialState() {
     return {
       todos: [
         {title: 'A thing well done', complete: false, priority: false},
@@ -17,19 +18,19 @@ var Todos = React.createClass({
     };
   },
 
-  toggleDropdown: function() {
+  toggleDropdown: function toggleDropdown() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   },
 
-  handleChange: function(e) {
+  handleChange: function handleChange(e) {
     this.setState({
       inputValue: e.target.value
     });
   },
 
-  addNewTodo: function(e) {
+  addNewTodo: function addNewTodo(e) {
     e.preventDefault();
     this.setState({
       todos: this.state.todos.concat({
@@ -39,7 +40,7 @@ var Todos = React.createClass({
     });
   },
 
-  completeTodo: function(i) {
+  completeTodo: function completeTodo(i) {
     var newTodos = this.state.todos.slice();
     newTodos[i].complete = !newTodos[i].complete;
     this.setState({
@@ -47,14 +48,14 @@ var Todos = React.createClass({
     });
   },
 
-  removeTodo: function(i) {
+  removeTodo: function removeTodo(i) {
     var newTodos = this.state.todos.slice(0, i).concat(this.state.todos.slice(i + 1));
     this.setState({
       todos: newTodos
     });
   },
 
-  render: function() {
+  render: function render() {
     var removeTodo = this.removeTodo;
     var completeTodo = this.completeTodo;
     return (
@@ -71,7 +72,7 @@ var Todos = React.createClass({
         <NewTodo addNewTodo={this.addNewTodo} inputValue={this.state.inputValue} onChange={this.handleChange} />
         <MenuItem divider />
         {
-          this.state.todos.map(function(todo, i) {
+          this.state.todos.map(function mapTodos(todo, i) {
             return (
               <MenuItem key={todo.title + i}>
                 <Todo todo={todo} removeTodo={removeTodo} completeTodo={completeTodo} i={i} />
@@ -82,6 +83,7 @@ var Todos = React.createClass({
       </DropdownButton>
     );
   }
+
 });
 
 module.exports = Todos;
